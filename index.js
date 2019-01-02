@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
 			}).on('end', () => {
 				body = Buffer.concat(body).toString();
 				const decord = decodeURIComponent(body);
-				console.info('['+now+'] 投稿: '+decoded);
+				console.info('[' + now + '] 投稿: ' + decoded);
 				res.write('<!DOCTYPE html><html lang="ja"><body><h1>'+decoded+'が投稿されました</h1></body></html>');
 				res.end();
 			});
